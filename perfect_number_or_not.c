@@ -1,25 +1,24 @@
-/*C program to check whether the given number is the Perfect number*/  
-#include<stdio.h>  
-#include<conio.h>  
-void main()  
-{  
-// declare and initialize the variables  
-int num, rem, sum = 0, i;  
-// take an input from the user.  
-printf("Enter a number\n");  
-scanf("%d", &num);      
-// find all divisors and add them  
-for(i = 1; i < num; i++)  
-                     {  
-                              rem = num % i;  
-                             if (rem == 0)  
-                                        {  
-                                               sum = sum + i;  
-                                         }  
-                        }  
-if (sum == num)  
-                      printf(" %d is a Perfect Number");  
-           else  
-                      printf("\n %d is not a Perfect Number");  
-getch();  
-}  
+/* C Program to find Perfect Number using For Loop */
+
+# include <stdio.h>   
+
+int main()   
+{   
+ int i, Number, Sum = 0 ;   
+  
+ printf("\n Please Enter any number \n") ;   
+ scanf("%d", &Number) ;   
+ 
+ for(i = 1 ; i < Number ; i++)   
+  {   
+   if(Number % i == 0)   
+     Sum = Sum + i ;   
+  }    
+
+ if (Sum == Number)   
+    printf("\n %d is a Perfect Number", Number) ;   
+ else   
+    printf("\n%d is not the Perfect Number", Number) ;   
+
+return 0 ;   
+}
